@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import SEP from "../Images/SEP.png";
+import SEPH from "../Images/SEPH.png";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/src/Images/EscuelaLogo.jpg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <section id="Logos">
+        <a href="./Nose.astro">
+          <Image src={SEP} alt="SEP" class="Logo" />
+        </a>
+        <a href="">
+          <Image src={SEPH} alt="SEPH" class="Logo" />
+        </a>
+      </section>
+    </header>
+    <slot />
+  </body>
+</html>
+
+<style>
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+
+    a > .Logo {
+      width: 30%;
+      height: 30%;
+    }
+  }
+</style>
+
+<style is:global>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    min-width: 0;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-size: 224px;
+    /* color-scheme: light dark; */
+  }
+
+  body {
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>

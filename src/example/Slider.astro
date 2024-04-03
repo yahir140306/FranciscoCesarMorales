@@ -1,0 +1,51 @@
+<!-- ---
+import { Image } from "astro:assets";
+import Imagen1 from "../Images/Imagen1.jpg";
+import Imagen2 from "../Images/Imagen2.jpg";
+// ... otras importaciones de imágenes
+---
+<div class="slider">
+  <section class="carrusel">
+    {const imagenesSlider = [Imagen1, Imagen2, // ... otras imágenes]}
+    {imagenesSlider.map((imagen, indice) => (
+      <Image key={indice} src={imagen} alt="Imagen" class="Imagen" />
+    ))}
+  </section>
+</div>
+
+<style>
+  .slider {
+    overflow: hidden;
+    width: 90%;
+  }
+
+  .carrusel {
+    width: 900%; /* Ajusta según el número de imágenes */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in;
+    align-items: center;
+  }
+
+  .carrusel img {
+    width: 100%; /* Descomenta para un ancho de imagen consistente */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+</style>
+
+<script>
+  let sliderInner = document.querySelector(".carrusel");
+  let indice = 0; // Comienza en la primera imagen
+
+  setInterval(function () {
+    let porcentaje = indice * -100;
+    sliderInner.style.transform = "translateX(" + porcentaje + "%)";
+    indice++;
+    if (indice === imagenesSlider.length) { // Verifica la última imagen
+      indice = 0;
+    }
+  }, 5000);
+</script> -->
