@@ -1,53 +1,60 @@
 ---
+import { Image } from "astro:assets";
+import Image1 from "../Images/Imagen1.jpg";
+import Image2 from "../Images/Imagen2.jpg";
+import Image3 from "../Images/Imagen3.jpg";
+import Image4 from "../Images/Imagen4.jpg";
+import Image5 from "../Images/Imagen5.jpg";
+import Image6 from "../Images/Imagen6.jpg";
 
 ---
 
 <section class="slider">
   <div class="slider__container container">
     <img
-      src="../../Slider/slider-js/assets/leftarrow.svg"
+      src="../../src/Images/leftarrow.svg"
       class="slider__arrow"
       id="before"
     />
 
     <section class="slider__body slider__body--show" data-id="1">
       <figure class="slider__picture">
-        <img
-          src="../../src/Images/Imagen1.jpg"
-          class="slider__img"
-        />
+        <Image src={Image1} alt="Primer Imagen" class="slider__img" />
       </figure>
     </section>
 
     <section class="slider__body" data-id="2">
       <figure class="slider__picture">
-        <img
-          src="../../src/Images/Imagen2.jpg"
-          class="slider__img"
-        />
+        <Image src={Image2} alt="Segundo Imagen" class="slider__img" />
       </figure>
     </section>
 
     <section class="slider__body" data-id="3">
       <figure class="slider__picture">
-        <img
-          src="../../src/Images/Imagen3.jpg"
-          class="slider__img"
-        />  
+        <Image src={Image3} alt="Tercer Imagen" class="slider__img" />
       </figure>
     </section>
 
     <section class="slider__body" data-id="4">
       <figure class="slider__picture">
-        <img
-          src="../../src/Images/Imagen4.jpg"
-          class="slider__img"
-        />
+        <Image src={Image4} alt="Cuarto Imagen" class="slider__img" />
+      </figure>
+    </section>
+    
+    <section class="slider__body" data-id="5">
+      <figure class="slider__picture">
+        <Image src={Image5} alt="Quinto Imagen" class="slider__img" />
+      </figure>
+    </section>
+    
+    <section class="slider__body" data-id="6">
+      <figure class="slider__picture">
+        <Image src={Image6} alt="Sexto Imagen" class="slider__img" />
       </figure>
     </section>
 
     <img
-      src="../../Slider/slider-js/assets/rightarrow.svg"
+      src="../../src/Images/rightarrow.svg"
       class="slider__arrow"
       id="next"
     />
