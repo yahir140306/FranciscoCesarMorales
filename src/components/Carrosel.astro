@@ -1,21 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import Image1 from "../Images/Imagen1.jpg";
-import Image2 from "../Images/Imagen2.jpg";
-import Image3 from "../Images/Imagen3.jpg";
-import Image4 from "../Images/Imagen4.jpg";
-import Image5 from "../Images/Imagen5.jpg";
-import Image6 from "../Images/Imagen6.jpg";
+import Image1 from "../../public/Images/Carrusel/Imagen1.jpg";
+import Image2 from "../../public/Images/Carrusel/Imagen2.jpg";
+import Image3 from "../../public/Images/Carrusel/Imagen3.jpg";
+import Image4 from "../../public/Images/Carrusel/Imagen4.jpg";
+import Image5 from "../../public/Images/Carrusel/Imagen5.jpg";
+import Image6 from "../../public/Images/Carrusel/Imagen6.jpg";
+// import Lado from "../../public/Images/Icons/leftarrow.svg";
+// import Right from "../../public/Images/Icons/rightarrow.svg";
 
 ---
 
 <section class="slider">
   <div class="slider__container container">
-    <img
-      src="../../src/Images/leftarrow.svg"
-      class="slider__arrow"
-      id="before"
-    />
+    <img src="/Images/Icons/leftarrow.svg" class="slider__arrow" id="before" />
 
     <section class="slider__body slider__body--show" data-id="1">
       <figure class="slider__picture">
@@ -53,11 +51,7 @@ import Image6 from "../Images/Imagen6.jpg";
       </figure>
     </section>
 
-    <img
-      src="../../src/Images/rightarrow.svg"
-      class="slider__arrow"
-      id="next"
-    />
+    <img src="/Images/Icons/rightarrow.svg" class="slider__arrow" id="next" />
   </div>
 </section>
 
@@ -72,7 +66,7 @@ import Image6 from "../Images/Imagen6.jpg";
   }
 
   .slider {
-    background-color: #f2f2f2;
+    /* background-color: #d2d2d2; */
     padding: 40px 0;
   }
 
@@ -89,7 +83,7 @@ import Image6 from "../Images/Imagen6.jpg";
     opacity: 0;
     pointer-events: none;
     display: grid;
-    background-color: #f2f2f2;
+    /* background-color: #d2d2d2; */
     grid-template-columns: 1fr max-content;
     align-items: center;
     transition: opacity 1.5s;
