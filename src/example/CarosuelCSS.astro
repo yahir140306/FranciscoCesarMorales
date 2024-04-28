@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import Image1 from "../../public/Images/Carrusel/Image1.jpg";
+import Image2 from "../../public/Images/Carrusel/Image2.jpg";
+---
+<section class="slider">
+  <div class="container mx-auto overflow-hidden">
+    <img
+      src="/Images/Icons/leftarrow.svg"
+      class="cursor-pointer w-full md:w-auto"
+      class:list="slider__arrow"
+      alt="Previous"
+      id="before"
+    />
+
+    <section
+      class="slider__body flex items-center justify-center opacity-0 transition duration-1500 ease-in-out"
+    >
+      <figure class="slider__picture mr-4">
+        <Image
+          src={Image1}
+          alt="Primer Imagen"
+          class="rounded-lg h-96 object-cover w-full"
+          class:list="slider__img"
+        />
+      </figure>
+    </section>
+
+    <section
+      class="slider__body flex items-center justify-center opacity-0 transition duration-1500 ease-in-out"
+    >
+      <figure class="slider__picture mr-4">
+        <Image
+          src={Image2}
+          alt="Segundo Imagen"
+          class="rounded-lg h-96 object-cover w-full"
+          class:list="slider__img"
+          />
+      </figure>
+    </section>
+
+    <img
+      src="/Images/Icons/rightarrow.svg"
+      class="cursor-pointer w-full md:w-auto justify-self-end"
+      class:list="slider__arrow"
+      alt="Next"
+      id="next"
+    />
+  </div>
+</section>
+
+<script src="../components/Carrosel.js"></script>
