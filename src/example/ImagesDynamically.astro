@@ -4,23 +4,20 @@ import { Image } from "astro:assets";
 
 interface Props {
   imagePath: string;
-  altText: string;
-  name: string;
-  age: number;
+  // altText: string;
 }
 
-const { imagePath, altText, name, age } = Astro.props;
+// , altText
+const { imagePath} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}"
+  "/src/assets/*.{jpg,png,gif}"
 );
 if (!images[imagePath])
   throw new Error(
-    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpg,png,gif}"`
   );
 ---
 
 <div class="card">
-  <h2>{name}</h2>
-  <p>Edad: {age}</p>
-  <Image src={images[imagePath]()} alt={altText} />
+  <Image src={images[imagePath]()} alt="Imagenes" />
 </div>
