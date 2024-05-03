@@ -18,6 +18,12 @@
 </header>
 
 <style>
+    /* header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+  } */
   nav {
     background: #0C231E;
     display: flex;
@@ -25,40 +31,25 @@
     align-items: center;
     padding: 20px;
   }
-
   .menu-list {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
-    /* li {
-      margin: 0 30px;
-    } */
-
     a {
-      padding: 5px;
+      padding: 10px;
       margin: 10px;
       cursor: pointer;
       color: #ffff;
       font-weight: 700;
     }
-
     a:hover {
       transition: .5s ease;
       border-bottom: 2px solid #104b3e;  
     }
   }
 
-  section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-  }
-
   @media (max-width: 768px) {
     .menu-list {
-      /* flex-wrap: wrap; */
       display: flex;
       flex-direction: column;
       justify-content: center;
