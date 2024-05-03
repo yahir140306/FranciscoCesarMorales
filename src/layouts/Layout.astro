@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import SEP from "../../public/Images/Icons/SEP.png";
 import SEPH from "../../public/Images/Icons/SEPH.png";
+import Header from "../components/Hero.astro"
 
 interface Props {
   title: string;
@@ -25,46 +26,35 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <header>
-      <section id="Logos">
-        <ul>
-          <a href="https://www.gob.mx/sep">
-            <Image src={SEP} alt="SEP" class="Logo" />
-          </a>
-          <a href="https://sep.hidalgo.gob.mx/">
-            <Image src={SEPH} alt="SEPH" class="Logo" />
-          </a>
-        </ul>
-      </section>
+    <header class="header">
+      <a href="https://www.gob.mx/sep">
+        <Image src={SEP} alt="SEP" class="Logo" />
+      </a>
+      <a href="https://sep.hidalgo.gob.mx/">
+        <Image src={SEPH} alt="SEPH" class="Logo" />
+      </a>
     </header>
+    <!-- <Header class="header" /> -->
     <slot />
   </body>
 </html>
 
 <style>
-  section {
-    /* display: flex;
+  .header {
+    /* position: fixed;
+     width: 100%;
+    z-index: 1; */
+    width: 90%;
+    padding: 10px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    padding: 10px;
-    width: 100%; */
+    margin: 0 10%;
+  }
 
-    ul {
-      display: flex;
-      /* justify-content: space-between; */
-      align-items: center;
-      /* margin:  auto; */
-      /* padding: 10px;
-      width: 100%; */
-      a {
-        .Logo {
-          width: 30%;
-          height: 30%;
-          /* margin: 1rem; */
-        }
-      }
-    }
+  .Logo {
+    width: 30%;
+    height: 30%;
   }
 </style>
 
@@ -84,6 +74,11 @@ const { title } = Astro.props;
   body {
     min-height: 100dvh;
   }
+  /* header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  } */
 
   h1,
   h2,
