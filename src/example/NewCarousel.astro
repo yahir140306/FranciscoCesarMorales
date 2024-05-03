@@ -1,0 +1,31 @@
+---
+import NewCarousel from "../example/ImagesDynamically.astro";
+---
+
+<section class="slider">
+  <img
+    src="/Images/Icons/leftarrow.svg"
+    class="cursor-pointer w-full md:w-auto"
+    class:list="slider__arrow"
+    alt="Previous"
+    id="before"
+  />
+
+  <NewCarousel imagePath="/src/assets/Image1.jpg" altText="Imagen1" />
+  <NewCarousel imagePath="/src/assets/Image2.jpg" altText="Imagen1" />
+  <NewCarousel imagePath="/src/assets/Image3.jpg" altText="Imagen1" />
+  <NewCarousel imagePath="/src/assets/Image4.jpg" altText="Imagen1" />
+  <NewCarousel imagePath="/src/assets/Image5.jpg" altText="Imagen1" />
+  <NewCarousel imagePath="/src/assets/Image6.jpg" altText="Imagen1" />
+
+  <img
+    src="/Images/Icons/rightarrow.svg"
+    class="cursor-pointer w-full md:w-auto justify-self-end"
+    class:list="slider__arrow"
+    alt="Next"
+    id="next"
+  />
+</section>
+
+
+<script src="../components/Carosuel/Carousel.js"></script>
