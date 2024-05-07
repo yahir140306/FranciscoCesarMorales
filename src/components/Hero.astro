@@ -1,50 +1,58 @@
 ---
-
+import Icon from "./Icon.astro"
 ---
 
+<!-- #0C231E -->
 <header>
-  <nav>
-    <ul class="menu-list">
-      <li><a href="">Inicio</a></li>
-      <li><a href="">Noticias</a></li>
-      <li><a href="">Contactar</a></li>
-      <li><a href="">Redes Sociales</a></li>
+  <nav class="bg-emerald-950 flex items-center justify-evenly p-4">
+    <!-- class="flex justify-evenly items-center" -->
+    <ul class="menu-list flex justify-evenly items-center">
+      <li>
+        <Icon imagePath="/public/Images/Icons/home.svg" altText="Inicio" />
+        <a href="">Inicio</a>
+      </li>
+      <li>
+        <Icon imagePath="/public/Images/Icons/news.svg" altText="notiicas" />
+        <a href="">Noticias</a>
+      </li>
+      <li>
+        <Icon imagePath="/public/Images/Icons/address-book.svg" altText="notiicas" />
+        <a href="">Contactar</a>
+      </li>
+      <li>
+        <Icon imagePath="/public/Images/Icons/network.svg" altText="noticias" />
+        <a href="">Redes Sociales</a>
+      </li>
     </ul>
     <ul class="menu-list">
-      <li><a href="/Login">Iniciar</a></li>
-      <li><a href="/SingUp">Registrar</a></li>
+      <li>
+        <Icon imagePath="/public/Images/Icons/user.svg" altText="crear" />
+        <a href="/Login">Iniciar</a>
+      </li>
+      <li>
+        <Icon imagePath="/public/Images/Icons/user-up.svg" altText="entrar" />
+        <a href="/SingUp">Registrar</a>
+      </li>
     </ul>
   </nav>
 </header>
 
 <style>
-    /* header {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    margin-bottom: 10px;
-  } */
-  nav {
-    background: #0C231E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
   .menu-list {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    a {
-      padding: 10px;
+    li {
       margin: 10px;
       cursor: pointer;
       color: #ffff;
       font-weight: 700;
+      display: flex;
+      align-items: center;
+      a {
+        margin: 10px;
+      }
     }
-    a:hover {
+    li:hover {
       transition: .5s ease;
-      border-bottom: 2px solid #104b3e;  
+      border-bottom: 3px solid #104b3e;  
     }
   }
 
