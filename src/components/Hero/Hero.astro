@@ -1,0 +1,70 @@
+---
+const navItemsOne = [
+  {
+    title: "Inicio",
+    alt: "Inicio",
+    url: "/#Inicio",
+    image: "/Images/Icons/home.svg",
+  },
+  {
+    title: "Noticias",
+    alt: "Noticias",
+    url: "/#Noticias",
+    image: "/Images/Icons/address-book.svg",
+  },
+  {
+    title: "Contactar",
+    alt: "Contactar",
+    url: "/#Contactar",
+    image: "/Images/Icons/news.svg",
+  },
+  {
+    title: "Redes Sociales",
+    alt: "Redes-Sociales",
+    url: "/#Redes",
+    image: "/Images/Icons/network.svg",
+  },
+];
+
+const navItemsTwo = [
+  {
+    title: "Entrar",
+    alt: "userLogin",
+    url: "/Login",
+    image: "../../../public/Images/Icons/user.svg",
+  },
+  {
+    title: "Registrar",
+    alt: "userCreate",
+    url: "/SingUp",
+    image: "../../../public/Images/Icons/user-up.svg",
+  },
+];
+---
+
+<header>
+  <nav class="bg-emerald-950 flex items-center justify-evenly p-2 text-white">
+    <ul class="menu-list flex justify-evenly items-center">
+      {
+        navItemsOne.map(({ title, alt, url, image }) => (
+          <li class="m-4 font-semibold flex items-center justify-center hover:border-b-2 duration-75">
+            <img src={image} alt={alt} class="m-2" />
+            <a href={url}> {title} </a>
+          </li>
+        ))
+      }
+    </ul>
+    <ul>
+      {
+        navItemsTwo.map(({ title, alt, url, image }) => (
+          <li class="m-4 text-white cursor-pointer font-semibold flex items-center hover:border-b-2 duration-75">
+            <img src={image} alt={alt} />
+            <a href={url} class="m-2">
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
