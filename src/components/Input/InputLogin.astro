@@ -1,0 +1,47 @@
+---
+import SUBMIT from "./Submit.astro";
+const INPUT = [
+  {
+    span: "Nombre del alumno: ",
+    type: "text",
+  },
+  {
+    span: "Nombre del Padre/Tutor: ",
+    type: "text",
+  },
+  {
+    span: "CURP: ",
+    type: "text",
+  },
+  {
+    span: "Correo Electronico: ",
+    type: "email",
+  },
+  {
+    span: "Contraseña: ",
+    type: "email",
+  },
+  {
+    span: "Confirmar Contraseña: ",
+    type: "email",
+  },
+];
+---
+
+<form
+  action=""
+  class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12"
+>
+  {
+    INPUT.map(({ span, type }) => (
+      <label class="flex p-2">
+        <span class="text-base m-2 p-2">{span}</span>
+        <input
+          type={type}
+          class="border-2 border-solid rounded focus:outline-none focus:border-emerald-950"
+        />
+      </label>
+    ))
+  }
+  <SUBMIT />
+</form>
