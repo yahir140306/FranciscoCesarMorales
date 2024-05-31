@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import SEP from "../../public/Images/Icons/SEP.png";
 import SEPH from "../../public/Images/Icons/SEPH.png";
+import { navItemsOne } from "../components/Hero/Hero.astro";
+import { navItemsTwo } from "../components/Hero/Hero.astro";
 interface Props {
   title: string;
 }
@@ -24,13 +26,41 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <header class="w-11/12 p-2 flex justify-between items-center m-auto">
-      <a href="https://www.gob.mx/sep">
-        <Image src={SEP} alt="SEP" class="w-4/12 h-2/6" />
-      </a>
-      <a href="https://sep.hidalgo.gob.mx/">
-        <Image src={SEPH} alt="SEPH" class="w-4/12 h-2/6" />
-      </a>
+    <header>
+      <section class="w-11/12 p-2 flex justify-between items-center m-auto">
+        <a href="https://www.gob.mx/sep">
+          <Image src={SEP} alt="SEP" class="w-4/12 h-2/6" />
+        </a>
+        <a href="https://sep.hidalgo.gob.mx/">
+          <Image src={SEPH} alt="SEPH" class="w-4/12 h-2/6" />
+        </a>
+      </section>
+      <section>
+        <nav class="bg-emerald-950 flex items-center justify-evenly p-2 text-white">
+          <ul class="block justify-evenly items-center sm:flex">
+            {
+              navItemsOne.map(({ title, alt, url, image }) => (
+                <li class="m-4 font-semibold flex items-center justify-center hover:border-b-2 duration-75">
+                  <img src={image} alt={alt} class="m-2" />
+                  <a href={url}> {title} </a>
+                </li>
+              ))
+            }
+          </ul>
+          <ul>
+            {
+              navItemsTwo.map(({ title, alt, url, image }) => (
+                <li class="m-4 text-white cursor-pointer font-semibold flex items-center hover:border-b-2 duration-75">
+                  <img src={image} alt={alt} />
+                  <a href={url} class="m-2">
+                    {title}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </section>
     </header>
     <slot />
   </body>
