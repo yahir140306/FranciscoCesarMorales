@@ -1,5 +1,5 @@
 ---
-import SUBMIT from "./Submit.astro";
+import Submit from "./Submit.astro";
 const INPUT = [
   {
     span: "Nombre del alumno: ",
@@ -30,7 +30,7 @@ const INPUT = [
 
 <form
   action=""
-  class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12"
+  class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12 mt-4"
 >
   {
     INPUT.map(({ span, type }) => (
@@ -43,5 +43,5 @@ const INPUT = [
       </label>
     ))
   }
-  <SUBMIT />
+  <Submit value="Registrar" />
 </form>

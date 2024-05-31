@@ -1,37 +1,24 @@
-<form action="">
-    <label>
-      <span>Nombre del alumno:</span>
-      <input type="text" />
-    </label>
-    <label>
-      <span>Nombre del tutor:</span>
-      <input type="text" />
-    </label>
-  </form>
-  
-  <style>
-    form {
-      width: 90%;
-      margin: 0 auto;
-      padding: 10px;
-      border: 2px solid #0C231E;
-      border-radius: 10px;
-      
-      label {
-          display: flex;
-          padding: 10px;
-      }
-      
-      span {
-          font-size: medium;
-          margin: 5px;
-      }
-  
-      input {
-        outline: none;
-        border: 1px solid black;
-        border-radius: 5px;
-      }
-    }
-  </style>
-  
+---
+import Submit from "./Submit.astro";
+---
+
+<form
+  action=""
+  class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12 mt-4"
+>
+  <label class="flex p-2">
+    <span class="text-base m-2 p-2">Nombre del alumno:</span>
+    <input
+      type="text"
+      class="border-2 border-solid rounded focus:outline-none focus:border-emerald-950"
+    />
+  </label>
+  <label class="flex p-2">
+    <span class="text-base m-2 p-2">Nombre del tutor:</span>
+    <input
+      type="text"
+      class="border-2 border-solid rounded focus:outline-none focus:border-emerald-950"
+    />
+  </label>
+  <Submit value="Entrar" />
+</form>
