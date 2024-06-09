@@ -2,7 +2,16 @@
 import { Image } from "astro:assets";
 import SEP from "../../public/Images/Icons/SEP.png";
 import SEPH from "../../public/Images/Icons/SEPH.png";
+<<<<<<< HEAD
 import { navItemsOne, navItemsTwo } from "../components/Hero/Hero.astro";
+=======
+import { navItemsOne } from "../components/Hero/Hero.astro";
+import { navItemsTwo } from "../components/Hero/Hero.astro";
+
+// cambiar los tipos de archivos Hero.astro a Hero.js
+// igual unir las funciones o array
+
+>>>>>>> 1308192c9abb44264fff229a309894c4d8c8d5db
 interface Props {
   title: string;
 }
@@ -19,7 +28,11 @@ const { title } = Astro.props;
     <link
       rel="icon"
       type="image/svg+xml"
+<<<<<<< HEAD
       href="/Images/Icons/Icon.png"
+=======
+      href="/Images/Icons/Escudo.jpg"
+>>>>>>> 1308192c9abb44264fff229a309894c4d8c8d5db
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
