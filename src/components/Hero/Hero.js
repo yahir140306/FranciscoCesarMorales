@@ -1,4 +1,3 @@
----
 export const navItemsOne = [
   {
     title: "Inicio",
@@ -40,5 +39,5 @@ export const navItemsTwo = [
     image: "/Images/Icons/user-up.svg",
   },
 ];
----
+
 
