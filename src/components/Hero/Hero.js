@@ -1,19 +1,19 @@
 export const navItemsOne = [
   {
     title: "Inicio",
-    alt: "Inicio",
+    alt: "Home",
     url: "/#Inicio",
     image: "/Images/Icons/home.svg",
   },
   {
     title: "Noticias",
-    alt: "Noticias",
+    alt: "News",
     url: "/#Noticias",
     image: "/Images/Icons/address-book.svg",
   },
   {
     title: "Contactar",
-    alt: "Contactar",
+    alt: "Comunicar",
     url: "/#Contactar",
     image: "/Images/Icons/news.svg",
   },
