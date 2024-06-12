@@ -1,29 +1,19 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
-
-interface Props {
-  imagePath: string;
-  altText: string;
-  name: string;
-  age: number;
-}
-
-const { imagePath, altText, name, age } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpg,png,gif}"
-);
-if (!images[imagePath])
-  throw new Error(
-    `"${imagePath}" does not exist in glob: "src/assets/*.{jpg,png,gif}"`
-  );
+import { DOCENTES } from "./Docentes.js";
 ---
 
-<div class="card">
-  <h2>{name}</h2>
-  <p>Edad: {age}</p>
-    <Image
-    src={images[imagePath]()}
-    alt={altText}
-  />
-</div>
+<h1 class="text-3xl text-center m-2">Docentes y Asistentes Del PLantel:</h1>
+<section class="m-2 grid grid-cols-2 sm:grid-cols-4">
+  {
+    DOCENTES.map(({ Nombre, cargo, image, alt }) => (
+      <article class="border-4 rounded-lg border-gren-950 m-2 p-2 bg-emerald-950 hover:bg-emerald-800">
+        <div class="flex m-2 text-white/95">
+          <img src={image} alt={alt} />
+          <h3 class="m-2">{Nombre}</h3>
+        </div>
+        <span class="text-white/80">{cargo}</span>
+      </article>
+    ))
+  }
+</section>
+
