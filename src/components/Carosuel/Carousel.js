@@ -19,13 +19,12 @@
         sliders[value - 1].classList.toggle('slider__body--show');
     }
 
-    // Función para cambiar automáticamente cada 3 segundos
     function autoChange() {
         setInterval(() => {
-            changePosition(1); // Avanzar al siguiente slide
-        }, 5000); // Cambio cada 3 segundos
+            changePosition(1); 
+        }, 5000); 
     }
 
-    // Iniciar el cambio automático
+
     autoChange();
 })();
