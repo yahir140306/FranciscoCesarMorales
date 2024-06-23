@@ -24,7 +24,6 @@
             changePosition(1); 
         }, 5000); 
     }
-
-
+    
     autoChange();
 })();
