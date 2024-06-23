@@ -30,14 +30,14 @@ const INPUT = [
 
 <form
   action=""
-  class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12 mt-4"
+  class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12 mt-4 mb-4"
 >
   {
     INPUT.map(({ span, type }) => (
       <label class="flex p-2">
         <span class="text-base m-2 p-2">{span}</span>
         <input
-          type="text"
+          type={type}
           class="border-2 border-solid rounded focus:outline-none focus:border-emerald-950"
         />
       </label>

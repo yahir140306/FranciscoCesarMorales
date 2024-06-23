@@ -4,24 +4,28 @@ export const navItemsOne = [
     alt: "Home",
     url: "/#Inicio",
     image: "/Images/Icons/home.svg",
+    id: "#Inicio"
   },
   {
     title: "Noticias",
     alt: "News",
     url: "/#Noticias",
     image: "/Images/Icons/address-book.svg",
+    id: "#Noticias"
   },
   {
     title: "Contactar",
     alt: "Comunicar",
     url: "/#Contactar",
     image: "/Images/Icons/news.svg",
+    id: "#Contactar"
   },
   {
     title: "Redes Sociales",
     alt: "Redes-Sociales",
     url: "/#Redes",
     image: "/Images/Icons/network.svg",
+    id: "Redes"
   },
 ];
 
