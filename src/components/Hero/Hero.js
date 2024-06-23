@@ -33,13 +33,13 @@ export const navItemsTwo = [
   {
     title: "Entrar",
     alt: "userLogin",
-    url: "/SingUp",
+    url: "/login",
     image: "/Images/Icons/user.svg",
   },
   {
     title: "Registrar",
     alt: "userCreate",
-    url: "/Login",
+    url: "/singup",
     image: "/Images/Icons/user-up.svg",
   },
 ];

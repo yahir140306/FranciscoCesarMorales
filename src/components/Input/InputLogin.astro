@@ -4,26 +4,38 @@ const INPUT = [
   {
     span: "Nombre del alumno: ",
     type: "text",
+    id: "name",
+    name: "name",
   },
   {
     span: "Nombre del Padre/Tutor: ",
     type: "text",
+    id: "nameTutor",
+    name: "nameTutor",
   },
   {
     span: "CURP: ",
     type: "text",
+    id: "curp",
+    name: "curp",
   },
   {
     span: "Correo Electronico: ",
     type: "email",
+    id: "email",
+    name: "email",
   },
   {
     span: "Contraseña: ",
-    type: "email",
+    type: "text",
+    id: "password",
+    name: "password",
   },
   {
     span: "Confirmar Contraseña: ",
-    type: "email",
+    type: "text",
+    id: "confirmPassword",
+    name: "confirmPassword",
   },
 ];
 ---
@@ -33,11 +45,14 @@ const INPUT = [
   class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12 mt-4 mb-4"
 >
   {
-    INPUT.map(({ span, type }) => (
+    INPUT.map(({ span, type, id, name }) => (
       <label class="flex p-2">
         <span class="text-base m-2 p-2">{span}</span>
         <input
           type={type}
+          id={id}
+          name={name}
+          required
           class="border-2 border-solid rounded focus:outline-none focus:border-emerald-950"
         />
       </label>
