@@ -1,25 +1,8 @@
 ---
 import { POSTS } from "./ContentPosto";
-// import type { ImageMetadata } from "astro";
-// import { Image } from "astro:assets";
-
-// interface Props {
-//   imagePath: string;
-//   altText: string;
-// }
-
-// // , altText
-// const { imagePath, altText } = Astro.props;
-// const image = import.meta.glob<{ default: ImageMetadata }>(
-//   "/src/assets/*.{jpg,png,gif}"
-// );
-// if (!image[imagePath])
-//   throw new Error(
-//     `"${imagePath}" does not exist in glob: "src/assets/*.{jpg,png,gif}"`
-//   );
 ---
 
-<section class="p-2 grid grid-cols-2 sm:grid-cols-3 ">
+<section class="p-2 grid grid-cols-2 sm:grid-cols-3 " id="Noticias">
   {
     POSTS.map(({ title, content, image, descripcion }) => (
       <article class="p-2 m-2 border rounded-lg border-green-950 hover:bg-emerald-950/95 hover:text-white">

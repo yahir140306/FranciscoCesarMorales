@@ -39,8 +39,9 @@ const { title } = Astro.props;
         <nav class="bg-emerald-950 flex items-center justify-evenly p-2 text-white">
           <ul class="block justify-evenly items-center sm:flex">
             {
-              navItemsOne.map(({ title, alt, url, image }) => (
-                <li class="m-4 font-semibold flex items-center justify-center hover:border-b-2 duration-75">
+              navItemsOne.map(({ title, alt, url, image, id }) => (
+                <li class="m-4 font-semibold flex items-center justify-center hover:border-b-2 duration-75"
+                id={id}>
                   <img src={image} alt={alt} class="m-2" />
                   <a href={url}> {title} </a>
                 </li>
