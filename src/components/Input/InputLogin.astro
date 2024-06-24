@@ -1,6 +1,13 @@
 ---
 import Submit from "./Submit.astro";
-const INPUT = [
+import { HTMLInputTypeAttribute } from "astro";
+
+const INPUT: {
+  span: string;
+  type: HTMLInputTypeAttribute;
+  id: string;
+  name: string;
+}[] = [
   {
     span: "Nombre del alumno: ",
     type: "text",
@@ -41,7 +48,8 @@ const INPUT = [
 ---
 
 <form
-  action=""
+  method="POST"
+  action="/src/api/singup"
   class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid border-emerald-950 sm:w-6/12 mt-4 mb-4"
 >
   {
@@ -49,7 +57,7 @@ const INPUT = [
       <label class="flex p-2">
         <span class="text-base m-2 p-2">{span}</span>
         <input
-          type={type}
+          type={type as HTMLInputTypeAttribute}
           id={id}
           name={name}
           required

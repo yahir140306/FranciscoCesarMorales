@@ -1,0 +1,93 @@
+---
+import "./form.css"
+---
+
+<form
+  action="/api/singup"
+  method="post"
+  class="w-11/12 m-auto p-2 rounded-lg border-2 border-solid block border-emerald-950 sm:w-6/12 mt-4 mb-4"
+>
+  <section class="sectionForm">
+    <label>
+      <span>Nombre del Alumno: </span>
+      <input type="text" name="name" placeholder="Nombre" required />
+    </label>
+    <label>
+      <span>Segundo Nombre: </span>
+      <input type="text" name="nameTwo" placeholder="Segundo Nombre" />
+    </label>
+    <label>
+      <span>Apellido Paterno: </span>
+      <input
+        type="text"
+        name="apellidoPA"
+        placeholder="Primer Apellido"
+        required
+      />
+    </label>
+    <label>
+      <span>Apellido Materno: </span>
+      <input
+        type="text"
+        name="apellidoMA"
+        placeholder="Segundo Apellido"
+        required
+      />
+    </label>
+  </section>
+
+  <section class="sectionForm">
+    <label>
+      <span>Nombre del Tutor: </span>
+      <input
+        type="text"
+        name="nameTutor"
+        placeholder="Nombre del Tutor"
+        required
+      />
+    </label>
+    <label>
+      <span>Apellido Paterno: </span>
+      <input
+        type="text"
+        name="apellidoMT"
+        placeholder="Primer Apellido"
+        required
+      />
+    </label>
+    <label>
+      <span>Apellido Materno: </span>
+      <input
+        type="text"
+        name="apellidoPT"
+        placeholder="Segundo Apellido"
+        required
+      />
+    </label>
+    <label>
+      <span>CURP del Alumno: </span>
+      <input type="text" name="curp" placeholder="Curp" required />
+    </label>
+    <label>
+      <span>Correo Electronico: </span>
+      <input type="email" name="email" placeholder="gmail@gmail.com" required />
+    </label>
+  </section>
+
+  <section class="sectionForm">
+    <label>
+      <span>Contraseña:</span>
+      <input type="password" name="password" placeholder="password" required />
+    </label>
+    <label>
+      <span>Confirmar contraseña:</span>
+      <input
+        type="password"
+        name="ConfirmPassword"
+        placeholder="password"
+        required
+      />
+    </label>
+  </section>
+  <input type="submit" value="Registrar" class="submit" />
+</form>
