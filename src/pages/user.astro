@@ -1,4 +1,54 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+const user = Astro.locals.user;
+console.log(user);
 ---
-<h1>Hola Mundo</h1>
+
+<Layout title="Session">
+  <section class="text-center">
+    <article class="text">
+      <h1>Hola Mundo</h1>
+      <h2>
+        Bienvenido <strong>{user?.username} {user?.ApellidoPaterno}</strong>
+      </h2>
+    </article>
+
+    <section class="text-center border border-emerald-950 m-4 p-4">
+      <ul>
+        <li class="border-green-900 border">Nombre: {user?.username}</li>
+        <li class="border-green-900 border">
+          Segundo Nombre: {user?.segundoNombre}
+        </li>
+        <li class="border-green-900 border">
+          Apellido Paterno: {user?.ApellidoPaterno}
+        </li>
+        <li class="border-green-900 border">
+          Apellido Materno: {user?.ApellidoMaterno}
+        </li>
+        <li class="border-green-900 border">
+          Nombre del Tutor: {user?.nameTutor}
+        </li>
+        <li class="border-green-900 border">
+          Apellido Paterno: {user?.apellidoTutorP}
+        </li>
+        <li class="border-green-900 border">
+          Apellido Materno: {user?.apellidoTutorM}
+        </li>
+        <li class="border-green-900 border">CURP del Alumno: {user?.curp}</li>
+      </ul>
+    </section>
+
+    {
+      user && (
+        <form method="POST" action="/api/singin">
+          <button
+            type="submit"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-sm m-5"
+          >
+            Cerrar Sesión
+          </button>
+        </form>
+      )
+    }
+  </section>
+</Layout>

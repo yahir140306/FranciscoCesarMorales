@@ -10,11 +10,39 @@ export const lucia = new Lucia(adapter, {
 			// set to `true` when using HTTPS
 			secure: import.meta.env.PROD
 		}
-	}
+	},
+	getUserAttributes: (attributes) => {
+		return {
+		  // attributes has the type of DatabaseUserAttributes
+		  username: attributes.username,
+		  segundoNombre: attributes.segundoNombre,
+		  ApellidoPaterno: attributes.ApellidoPaterno,
+		  ApellidoMaterno: attributes.ApellidoMaterno,
+		  nameTutor: attributes.nameTutor,
+		  apellidoTutorP: attributes.apellidoTutorP,
+		  apellidoTutorM: attributes.apellidoTutorM,
+		  curp: attributes.curp,
+		  email: attributes.email
+		};
+	  },
 });
 
 declare module "lucia" {
 	interface Register {
 		Lucia: typeof lucia;
+		DatabaseUserAttributes: DatabaseUserAttributes;
 	}
 }
+
+interface DatabaseUserAttributes {
+	username: string;
+	segundoNombre: string;
+	ApellidoPaterno: string;
+	ApellidoMaterno: string;
+	nameTutor: string;
+	apellidoTutorP: string;
+	apellidoTutorM: string;
+	curp: string;
+	email: string;
+  }
+  

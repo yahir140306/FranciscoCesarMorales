@@ -7,17 +7,17 @@ import { lucia } from "@/auth";
 export async function POST(context: APIContext): Promise<Response> {
   // Parse the form data
   const formData = await context.request.formData(); // ?
-  const username = formData.get("name");
-  const usernametwo = formData.get("nameTwo");
-  const apellidoP = formData.get("apellidoPA");
-  const apellidoM = formData.get("apellidoMA");
-  const nombreTutor = formData.get("nameTutor");
-  const apellidoTutorP = formData.get("apellidoTutorMT");
-  const apellidoTutorM = formData.get("apellidoTutorPT");
+  const username = formData.get("username");
+  const segundoNombre = formData.get("segundoNombre");
+  const ApellidoPaterno = formData.get("ApellidoPaterno");
+  const ApellidoMaterno = formData.get("ApellidoMaterno");
+  const nameTutor = formData.get("nameTutor");
+  const apellidoTutorP = formData.get("apellidoTutorP");
+  const apellidoTutorM = formData.get("apellidoTutorM");
   const curp = formData.get("curp");
   const email = formData.get("email");
   const password = formData.get("password");
-  const passwordConfirm = formData.get("ConfirmPassword");
+  const passwordConfirm = formData.get("passwordConfirm");
 
   // validate the form data
   if (!username || !password) {
@@ -48,10 +48,10 @@ export async function POST(context: APIContext): Promise<Response> {
     {
       id: userId,
       username,
-      segundoNombre: String(usernametwo),
-      ApellidoPaterno: String(apellidoP),
-      ApellidoMaterno: String(apellidoM),
-      nameTutor: String(nombreTutor),
+      segundoNombre: String(segundoNombre),
+      ApellidoPaterno: String(ApellidoPaterno),
+      ApellidoMaterno: String(ApellidoMaterno),
+      nameTutor: String(nameTutor),
       apellidoTutorP: String(apellidoTutorP),
       apellidoTutorM: String(apellidoTutorM),
       curp: String(curp),
