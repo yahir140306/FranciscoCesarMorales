@@ -40,13 +40,14 @@ console.log(user);
 
     {
       user && (
-        <form method="POST" action="/api/singin">
-          <button
+        <form method="POST" action="/api/singout">
+          <a
+            href="/"
             type="submit"
             class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-sm m-5"
           >
             Cerrar Sesión
-          </button>
+          </a>
         </form>
       )
     }
