@@ -4,10 +4,6 @@ import { db, eq, User } from "astro:db";
 import { Argon2id } from "oslo/password";
 export async function POST(context: APIContext): Promise<Response> {
   
-  const sessionSing = await lucia.getSession(context.request);
-  if (sessionSing) {
-    return context.redirect("/user");
-  }
     //read the form data
   const formData = await context.request.formData();
   const curp = formData.get("curp");
